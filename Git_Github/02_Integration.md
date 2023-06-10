@@ -1,8 +1,8 @@
-# Git, Github #2
+# Git, Github #2 :: Integration
 
 ## Integrating git and github(연동)
 
-### Account Integration(계정 연동)
+### *Account Integration(계정 연동)*
 
 > git은 로컬에서 작업하는 것이기 때문에, 공유나 제어등을 위하여 github의 원격 저장소에 업로드를 해야한다.
 
@@ -24,7 +24,7 @@ git config user.email   #User Email
 
 <br>
 
-### Repository Integration (내 레포지토리 연동)
+### *Repository Integration (내 레포지토리 연동)*
 
 작업 트리, 내가 사용할 로컬 폴더에 git bash를 열고 `git init` 명령어를 사용한다.
 
@@ -56,7 +56,7 @@ git remote -v
 
 <br>
 
-#### Address를 잘못했을 때
+#### *Address를 잘못했을 때*
 
 Name을 잘못 지정했을때는, 재지정 후 삭제
 

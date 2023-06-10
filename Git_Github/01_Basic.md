@@ -1,4 +1,4 @@
-# Git, Github
+# Git, Github :: Basic
 
 ## What is different git and github?
 
