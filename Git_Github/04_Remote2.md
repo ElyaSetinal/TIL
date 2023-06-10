@@ -36,7 +36,6 @@ git pull {Github remote name} {Branch Name}
 
 > Merge?    
 로컬 저장소의 버전과 원격 저장소의 버전이 서로 상이한 경우, 이를 하나의 버전으로 묶어주는 작업    
-<br>
 e.g., 서울(First Commit)에서 A(로컬), B(원격) 두 팀이 출발 > A팀은 광명-수원, B팀은 성남-용인 (버전이 다름) > 합류를 위해 두 팀 모두 평택으로 이동(Merge; 병합)
 
 Merge 작업 동안 서로 충돌(Conflict)이 나는 부분이 나오는데, 이를 수정 혹은 선택하고 Merge를 종료하면 하나의 파일이 되고 이를 다시 Commit하면 Merge까지 완료된 버전이 기록된다.
