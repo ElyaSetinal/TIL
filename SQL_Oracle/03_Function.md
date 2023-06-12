@@ -41,20 +41,15 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 | Lower() :: 소문자 변경 | String | 모든 글자를 소문자로 | v | lower('MANAGER') |
 | Upper() :: 대문자 변경 | String | 모든 글자를 대문자로 | v | upper('manager') |
 | CONCAT() :: 문자열 연결 | String1, String2 | 문자 연결, ||(파이프 연산자)와 동일 동작 | v | concat('ORACLE','SERVER') |
-| Lpad() :: 좌측 문자열 끼우기 | String, length, [Fill] | number만큼의 길이가 되도록 왼쪽에 공백을 생성
-[Fill]이 있으면, 그 Data를 공백에 입력 | v | lpad('MILLER', 10, '*') |
-| Rpad() :: 우측 문자열 끼우기 | String, length, [Fill] | number만큼의 길이가 되도록 오른쪽에 공백을 생성, [Fill]이 있으면, 그 Data를 공백에 입력 | v | rpad('MILLER',10, '*') |
-| Substr() :: 부분열 반환 | String, index, [length] | 문자열에서 index 위치부터 시작하여 [length]의 
-길이만큼 문자열 추출, 길이가 없으면 끝까지 | v | substr('000101-3234232', 8, 1) |
+| Lpad() :: 좌측 문자열 끼우기 | String, length, [Fill] | number만큼의 길이가 되도록 왼쪽에 공백을 생성, [Fill]이 있으면 그 Data를 공백에 입력 | v | lpad('MILLER', 10, '*') |
+| Rpad() :: 우측 문자열 끼우기 | String, length, [Fill] | number만큼의 길이가 되도록 오른쪽에 공백을 생성, [Fill]이 있으면 그 Data를 공백에 입력 | v | rpad('MILLER',10, '*') |
+| Substr() :: 부분열 반환 | String, index, [length] | 문자열에서 index 위치부터 시작하여 [length]의 길이만큼 문자열 추출, 길이가 없으면 끝까지 | v | substr('000101-3234232', 8, 1) |
 | Length() :: 문자열 길이 | String | 문자열의 길이를 반환 | v | length('000101-3234232') |
-| Replace() :: 문자열 치환 | string, index, [string] | 문자열에서 특정 문자를 치환, 
-[string]이 없으면 공백으로 치환 됨 | v | replace('JACK and JUE', 'J', 'BL') |
+| Replace() :: 문자열 치환 | string, index, [string] | 문자열에서 특정 문자를 치환, [string]이 없으면 공백으로 치환 됨 | v | replace('JACK and JUE', 'J', 'BL') |
 | Instr() :: 특정 문자 위치 반환 | String, Target, Start Position, [n] | 문자열에서 타겟 문자의 위치를 반환, [n]이 있으면 n번째 타겟 문자의 위치를 반환 | v | instr('MILLER' , 'L', 1, 2 ) |
 | Ltrim() :: 왼쪽 자르기 | String, [Target] | 첫 문자가 [Target]이 아닐때까지, 왼쪽 문자열 삭제 | x | ltrim('MILLERM', 'M') |
 | Rtrim() :: 오른쪽 자르기 | String, [Target] | 끝 문자가 [Target]이 아닐때까지, 오른쪽 문자열 삭제 | x | rtrim('MILLERM', 'M') |
-| Trim() :: 자르기 | [Option] Target 
-From String | Option에 따라, 특정 문자(Target)을 자른다.
-(Leading :: 왼쪽, Trailing :: 오른쪽, Both :: 양쪽) | v | TRIM(both 1 from 111234561111 ) |
+| Trim() :: 자르기 | [Option] Target From String | Option에 따라, 특정 문자(Target)을 자른다. (Leading :: 왼쪽, Trailing :: 오른쪽, Both :: 양쪽) | v | TRIM(both 1 from 111234561111 ) |
 
 <br>
 
@@ -79,8 +74,7 @@ From String | Option에 따라, 특정 문자(Target)을 자른다.
 
 | 함수명 | 파라미터 | 동작 | ANSI | 전체 형상(예시) |
 | :--- | :---: | :--- | :---: | :---: |
-| Sysdate |  | 현재 날짜 반환
-날짜에 연산이 가능함 | x | sysdate |
+| Sysdate |  | 현재 날짜 반환, 날짜에 연산이 가능함 | x | sysdate |
 | Systimestamp |  | 시분초, 도, GMT기준 시간 차이까지 반환. 연산이 가능하나, 시분초가 반환되지 않음 | x | systimestamp |
 | Months_between() | Date1, Date2 | D1과 D2의 개월 수 계산, 소수점으로 반환된다. | v | months_between(sysdate+100, sysdate) |
 | Add_months() | Date, Number | 날짜에 개월 수를 더한다. | v | add_months(sysdate, 1) |
