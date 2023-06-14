@@ -8,6 +8,7 @@
 - [04_Join, 병합](https://github.com/ElyaSetinal/TIL/blob/main/SQL_Oracle/04_Join.md)
 - [05_Sub_Query, 부수적 Select문](https://github.com/ElyaSetinal/TIL/blob/main/SQL_Oracle/05_Sub_Query.md)
 - [06_DML_TCL, 데이터 조작어+트랜잭션 조작어](https://github.com/ElyaSetinal/TIL/blob/main/SQL_Oracle/06_DML_TCL.md)
+- [07_DDL, 데이터 정의어](https://github.com/ElyaSetinal/TIL/blob/main/SQL_Oracle/07_DDL.md)
 
 ## Python
 
