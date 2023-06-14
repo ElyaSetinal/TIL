@@ -57,21 +57,21 @@
 - 기본 선언 방식(컬럼 레벨, 테이블 레벨)
     
     ``` SQL
-    Column_Level
+    /* Column_Level */
 
     Create Table Table_Name(
-    Column_Name Datatype Constraint const.name Constraint_Type 
+    Column_Name Datatype Constraint Constraint_name Constraint_Type 
     /* [제약 조건 선언] [제약 조건 명] [제약 조건 타입] (권장 사항) */
     혹은 Column Datatype Constraint_Type, /* 제약조건 타입 */
     );
     ```
     
     ``` SQL
-    Table_Level
+    /* Table_Level */
 
     Create Table Table_Name(
     Column_Name Datatype, ... ,
-    Constraint const.name Constraint_Type (Column_Name) /* 괄호안에 반드시 Column명 명시 */
+    Constraint Constraint_name Constraint_Type (Column_Name) /* 괄호안에 반드시 Column명 명시 */
     );
     ```
 
@@ -79,7 +79,7 @@
 
     - 제약 조건을 삭제하거나 비활성화 할 때, 제약 조건의 이름(제약 조건 명)을 사용한다.
 
-    - 제약 조건 명 권장 사항 : 테이블 명\_컬럼 명\_제약 조건 타입 약자 (Table.name\_Column\_Constratint Type.Abbreviation)
+    - 제약 조건 명 권장 사항 : 테이블 명\_컬럼 명\_제약 조건 타입 약자 (Table_name\_Column\_Constratint Type.Abbreviation)
 
     - 제약조건 이름은 항상 다르게 해야한다. 같으면 에러 발생
 
@@ -101,7 +101,7 @@
 컬럼 레벨
 ``` SQL
 Create Table Table_Name(
-Column_pk Datatype Constraint const.name PRIMARY KEY, ...
+Column_pk Datatype Constraint Constraint_name PRIMARY KEY, ...
  혹은 Column_pk Datatype PRIMARY KEY, ...
 );
 ```
@@ -111,7 +111,7 @@ Column_pk Datatype Constraint const.name PRIMARY KEY, ...
 ``` SQL
 Create Table Table_Name(
 Column_pk Datatype, ... ,
-Constraint const.name PRIMARY KEY (Column_pk) /* 괄호안에 반드시 Column명 명시 */
+Constraint Constraint_name PRIMARY KEY (Column_pk) /* 괄호안에 반드시 Column명 명시 */
 );
 ```
 
@@ -119,7 +119,7 @@ Constraint const.name PRIMARY KEY (Column_pk) /* 괄호안에 반드시 Column�
 
 - PK 무결성 확인은 Pair 비교를 통하여 시행한다.
 -   ``` SQL
-    Constraint const.name PRIMARY KEY (Column1, Column2)
+    Constraint Constraint_name PRIMARY KEY (Column1, Column2)
     ```
 
 #### Unique; UK
@@ -128,7 +128,7 @@ Constraint const.name PRIMARY KEY (Column_pk) /* 괄호안에 반드시 Column�
 
 ``` SQL
 Create Table Table_Name(
-Column_uk Datatype Constraint const.name UNIQUE, ...
+Column_uk Datatype Constraint Constraint_name UNIQUE, ...
  혹은 Column_uk Datatype UNIQUE, ...
 );
 ```
@@ -138,13 +138,13 @@ Column_uk Datatype Constraint const.name UNIQUE, ...
 ``` SQL
 Create Table Table_Name(
 Column_uk Datatype, ... ,
-Constraint const.name UNIQUE ( Column_uk ) /* 괄호안에 반드시 Column명 명시 */
+Constraint Constraint_name UNIQUE ( Column_uk ) /* 괄호안에 반드시 Column명 명시 */
 );
 ```
 
 - 복합 컬럼을 UK로 만들때, 테이블 레벨에서만 가능
 -   ``` SQL
-    Constraint const.name UNIQUE (Column1, Column2)
+    Constraint Constraint_name UNIQUE (Column1, Column2)
     ```
 
 #### Not Null; NN
@@ -155,7 +155,7 @@ Constraint const.name UNIQUE ( Column_uk ) /* 괄호안에 반드시 Column명 �
 컬럼 레벨
 ``` SQL
 Create Table Table_Name(
-Column_nn Datatype Constraint const.name NOT NULL, ...
+Column_nn Datatype Constraint Constraint_name NOT NULL, ...
  혹은 Column_nn Datatype NOT NULL, ...
 );
 ```
@@ -167,7 +167,7 @@ Column_nn Datatype Constraint const.name NOT NULL, ...
 
 ``` SQL
 Create Table Table_Name(
-Column_ck Datatype Constraint const.name CHECK(조건식), ...
+Column_ck Datatype Constraint Constraint_name CHECK(조건식), ...
  혹은 Column_ck Datatype CHECK(조건식), ...
 );
 ```
@@ -177,7 +177,7 @@ Column_ck Datatype Constraint const.name CHECK(조건식), ...
 ``` SQL
 Create Table Table_Name(
 Column_ck Datatype, ... ,
-Constraint const.name  CHECK(조건식)
+Constraint Constraint_name  CHECK(조건식)
 );
 ```
 
@@ -198,8 +198,8 @@ Constraint const.name  CHECK(조건식)
 
 ``` SQL
 Create Table Table_Name(
-Column_fk Datatype Constraint const.name References MasterTable.Name (Column_pk or _uk) On Delete CASCADE 혹은 On Delete Set Null, ...
- 혹은 Column_fk Datatype References MasterTable.Name (Column_pk or _uk) On Delete CASCADE 혹은 On Delete Set Null, ...
+Column_fk Datatype Constraint Constraint_name References MasterTable_Name (Column_pk or _uk) On Delete CASCADE 혹은 On Delete Set Null, ...
+ 혹은 Column_fk Datatype References MasterTable_Name (Column_pk or _uk) On Delete CASCADE 혹은 On Delete Set Null, ...
 );
 ```
 
@@ -208,7 +208,7 @@ Column_fk Datatype Constraint const.name References MasterTable.Name (Column_pk 
 ``` SQL
 Create Table Table_Name(
 Column_fk Datatype, ... ,
-Constraint const.name FOREIGN KEY (Column_fk) References MasterTable.Name (Column_pk or _uk) On Delete CASCADEorOn Delete Set Null, ...
+Constraint Constraint_name FOREIGN KEY (Column_fk) References MasterTable_Name (Column_pk or _uk) On Delete CASCADE 혹은 On Delete Set Null, ...
 );
 ```
 
@@ -232,7 +232,7 @@ DML Delete와의 차이
 
 기본 문법
 ``` SQL
-Truncate table Table.name
+Truncate table Table_name
 ```
 
 <br>
@@ -242,22 +242,22 @@ Truncate table Table.name
 Column 추가
 
 ``` SQL
-Alter table Table.name
+Alter table Table_name
 Add (Column1 Datatype, Column2 Datatype, …)
 ```
 
 Column 삭제
 
 ``` SQL
-Alter table Table.name
+Alter table Table_name
 Drop (Column1, Column2, …)
 ```
 
 Data 크기 변경
 
 ``` SQL
-Alter table Table.name
-Modify(Column Datatype) /*  데이터 타입은 동일하게, 크기만 줄이기 */
+Alter table Table_name
+Modify (Column Datatype) /*  데이터 타입은 동일하게, 크기만 줄이기 */
 ```
 - e.g. number(4) <> number(6) :: 크기를 줄일 때는 Record가 없어야 한다.   
 (크기를 축소시 Record를 비워야 한다는 에러메시지 출력)
@@ -265,8 +265,8 @@ Modify(Column Datatype) /*  데이터 타입은 동일하게, 크기만 줄이�
 Data Type 변경
 
 ``` SQL
-Alter table Table.name
-Modify(Column Datatype) /* 데이터 타입을 다르게 */
+Alter table Table_name
+Modify (Column Datatype) /* 데이터 타입을 다르게 */
 ```
 - e.g. number(4) <> varchar2(4) :: Type 변경 시 Record가 없어야 한다.   
 (타입 변경시 Record를 비워야 한다는 에러메시지 출력)
@@ -275,14 +275,14 @@ Modify(Column Datatype) /* 데이터 타입을 다르게 */
 - Not Null은 추가가 아니라 변경 문법을 사용
 
 ``` SQL
-Alter table Table.name
-Add Constraint Const.name Const.type(Column)
-/* Const.type에는 PRIMARY KEY, UNIQUE, CHECK, FOREIGN KEY만 가능 */
+Alter table Table_name
+Add Constraint Constraint_name Constraint_type(Column)
+/* Constraint_type에는 PRIMARY KEY, UNIQUE, CHECK, FOREIGN KEY만 가능 */
 ```
 
 ``` SQL
-Alter table Table.name
-Modify (Column Datatype Constraint Const.name NOT NULL)
+Alter table Table_name
+Modify (Column Datatype Constraint Constraint_name NOT NULL)
 /* NOT NULL은 제약조건을 수정하는 것으로 NOT NULL 말고는 변경이 안됨 */
 ```
 
@@ -290,12 +290,12 @@ Modify (Column Datatype Constraint Const.name NOT NULL)
 - Create : 제약조건 생성시 이름을 지정하는 이유
 
 ``` SQL
-Alter table Table.name
-Drop Constraint Const.name
+Alter table Table_name
+Drop Constraint Constraint_name
 ```
 
 ``` SQL
-Alter table Table.name
+Alter table Table_name
 Drop PRIMARY KEY 
 /* PK는 Table에 단 한 개가 있으므로, 별도의 이름이 필요치 않음 */
 ```
