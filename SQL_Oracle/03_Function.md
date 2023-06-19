@@ -1,4 +1,4 @@
-## 개요
+## **개요**
 
 Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역할을 수행
 
@@ -29,7 +29,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Single Row :: Text/String (문자/문자열)
+## **Single Row :: Text/String (문자/문자열)**
 
 문자열과 관련된 함수
 
@@ -53,7 +53,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Single Row :: Number (숫자)
+## **Single Row :: Number (숫자)**
 
 수치와 관련된 함수
 
@@ -68,7 +68,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Single Row :: Date (날짜)
+## **Single Row :: Date (날짜)**
 
 날짜와 관련된 함수, Oracle에 종속적인 함수가 많다.
 
@@ -85,7 +85,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Single Row :: Translate (변환)
+## **Single Row :: Translate (변환)**
 
 날짜 ↔ 문자 ↔ 수치 변환하는 함수, 날짜 ↔ 수치 직접 변환은 불가능하다.
 
@@ -110,7 +110,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Single Row :: Case (조건)
+## **Single Row :: Case (조건)**
 
 특정 조건이 만족하면 어떤 연산을 하는 프로그래밍 언어의 `if-elif`, `switch-case` 구문
 
@@ -151,7 +151,7 @@ Function은 다른 프로그래밍 언어와 동일하게, 기능 처리의 역�
 
 <br>
 
-## Group Row :: Group Func.
+## **Group Row :: Group Func.**
 
 Record가 그룹으로 묶여야 할 때 사용
 
@@ -168,7 +168,7 @@ Record가 그룹으로 묶여야 할 때 사용
 
 <br>
 
-## Group Row :: Group by, Having
+## **Group Row :: Group by, Having**
 
 Select 절에 그룹 함수 사용시, 명시적으로 지정하는 구문
 

@@ -1,4 +1,4 @@
-## DDL, Date Define/Definition Langauage
+## **DDL, Date Define/Definition Langauage**
 
 객체의 생성, 수정, 삭제을 하는데 사용되는 명령어
 
@@ -14,7 +14,7 @@
         | Synonym | Table의 비휘발성 별칭 (AS~ 나, FROM A a 같은 휘발성이 아님)<br> Table에 별칭을 줌으로써 보안성을 향상 |
 - 자동으로 COMMIT이 된다.(Autocommit)
 
-## DDL :: Create
+## **DDL :: Create**
 
 새로운 테이블을 생성한다.
 
@@ -50,7 +50,7 @@
     - 주로 고정된 값일 때 사용된다. e.g. ‘남고’에 ‘학생 목록 - 성별’이나 ‘게시글 작성일’ 같은 항목
     - Record 중복 금지 이슈 같은거 주의해야 함
 
-### Create : Constaint Type
+### *Create : Constaint Type*
 
 제약 조건 타입(Constraint Type)을 이용해서 Table에 저장되는 Data의 무결성을 보장
 
@@ -84,7 +84,7 @@
     - 제약조건 이름은 항상 다르게 해야한다. 같으면 에러 발생
 
 ---
-#### 다시보는 Constraint Type
+#### *다시보는 Constraint Type*
 
 | Type | Desc. | Column Level | Table Level |
 | --- | --- | :---: | :---: |
@@ -96,7 +96,7 @@
 
 ---
 
-#### Primary Key; PK
+#### *Primary Key; PK*
 
 컬럼 레벨
 ``` SQL
@@ -122,7 +122,7 @@ Constraint Constraint_name PRIMARY KEY (Column_pk) /* 괄호안에 반드시 Col
     Constraint Constraint_name PRIMARY KEY (Column1, Column2)
     ```
 
-#### Unique; UK
+#### *Unique; UK*
 
 컬럼 레벨
 
@@ -147,7 +147,7 @@ Constraint Constraint_name UNIQUE ( Column_uk ) /* 괄호안에 반드시 Column
     Constraint Constraint_name UNIQUE (Column1, Column2)
     ```
 
-#### Not Null; NN
+#### *Not Null; NN*
 - 원래 Null이 가능하던 것이 금지되는 것이라, Not null 만큼은 제약조건을 추가하는 것이 아니라,기존 제약조건을 변경하는 작업이다.
 
 - `Alter table` 이용한 제약조건 추가 문법이, 테이블 레벨 문법과 동일하다. Not Null은 추가할 수 없기에 테이블 레벨 문법을 사용 할 수 없다.
@@ -160,7 +160,7 @@ Column_nn Datatype Constraint Constraint_name NOT NULL, ...
 );
 ```
 
-#### Check; CK
+#### *Check; CK*
 - 비즈니스 규칙 설정. 입력값을 제한하고 싶을 때 사용하는 제약조건이다.
 
 컬럼 레벨
@@ -183,7 +183,7 @@ Constraint Constraint_name  CHECK(조건식)
 
 - 조건식의 내용에 따라 다중 규칙이 가능하다
 
-#### Foreign Key; FK
+#### *Foreign Key; FK*
 - Master Table의 PK 또는 UK 컬럼만 참조할 수 있으며, 그 값은 PK 또는 UK의 값, Null만 가능하다.
 
 - Datatype은 동일해야 하고, Slave의 FK와 Master의 PK/UK는 컬럼명은 달라도 상관없으나, 다르게 되면 Natural Join, Using이 불가능하다.
@@ -217,7 +217,7 @@ Constraint Constraint_name FOREIGN KEY (Column_fk) References MasterTable_Name (
 
 <br>
 
-### DDL :: Table Truncate
+### *DDL :: Table Truncate*
 
 Table을 절삭할 때 사용, 모든 레코드를 삭제 (테이블을 삭제하는 게 아니라 내용을 삭제, 구조만 남는다.)
 
@@ -237,7 +237,7 @@ Truncate table Table_name
 
 <br>
 
-### DDL :: Table Update
+### *DDL :: Table Update*
 
 Column 추가
 
@@ -300,7 +300,7 @@ Drop PRIMARY KEY
 /* PK는 Table에 단 한 개가 있으므로, 별도의 이름이 필요치 않음 */
 ```
 
-#### Delete, Drop시 옵션 조건
+#### *Delete, Drop시 옵션 조건*
 
 | 옵션 명 | 사용처 | 동작 |
 | --- | --- | --- |
@@ -319,7 +319,7 @@ CASCADE : 마스터 테이블 PK 제약조건 삭제시
 
 <br>
 
-### View
+### *View*
 
 Table의 창, 원하는 내용만 보여주도록 하는 일종의 Mask
 

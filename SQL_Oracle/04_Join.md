@@ -1,4 +1,4 @@
-## 개요
+## **개요**
 
 원하는 컬럼(Data)가 하나의 Table이 아닌 여러 Table에 분산된 경우, Table을 연결하여 원하는 값을 얻을 때 사용하는 명령어
 
@@ -22,7 +22,7 @@
     | Self Join |  |
 
 
-## 제약 조건(Constraint) Type
+## **제약 조건(Constraint) Type**
 
 - 이름(Name)이 아니다. Type
 
@@ -36,14 +36,14 @@
 
 <br>
 
-## Join 공통 속성
+## **Join 공통 속성**
 
 - Select 절의 Column 앞에 Table 위치를 지정할 수 있다. e.g., a.A (a Table의 A Column)
 
 - From 절에서 Table 별칭을 지정할 수 있다. 다만, 별칭이 지정되면 Select 절의 위치지정은 반드시 별칭만을 써야한다.
 
 
-### Inner JOIN :: Natural Join
+### *Inner JOIN :: Natural Join*
 
 ```SQL 
 SELECT [Column1’s Table.]Column1, [Column2’s Table.]Column2, ...
@@ -55,7 +55,7 @@ FROM Table1 [Table1 Nick] NATURAL JOIN Table2 [Table2 Nick]
 - 공통 Column(FK)는 위치지정이 불가능하다.
 
 
-### Inner JOIN :: Using()
+### *Inner JOIN :: Using()*
 
 ``` SQL
 SELECT [Column1’s Table.]Column1, [Column2’s Table.]Column2, ...
@@ -69,7 +69,7 @@ FROM Table1 [Table1 Nick] JOIN Table2 [Table2 Nick] USING(Common Column)
 - 여러 테이블이 서로 다른 FK로 연결될 때 유용하다.
 
 
-### Inner JOIN :: On()
+### *Inner JOIN :: On()*
 
 ``` SQL
 SELECT [Column1’s Table.]Column1, [Column2’s Table.]Column2, ...
@@ -94,7 +94,7 @@ FROM Table1 [Table1 Nick] JOIN Table2 [Table2 Nick] ON 조건식
     - Non-equi JOIN시, 범위 조건을 만족하면 연결된다.
 
 
-### Inner JOIN :: n-Table Join
+### *Inner JOIN :: n-Table Join*
 
 별도의 구문이 있는 것은 아니지만, 여러개의 Table을 연결하는 방법에 대하여 기술
 
@@ -121,7 +121,7 @@ FROM Table1 JOIN Table2 USING/ON...
 - Join하는 방식을 Using과 On 방식 모두 사용(=통일할 필요는 없음)이 가능하므로, 필요에 따라 적절히 변경
 
 
-### Inner JOIN :: Self Join
+### *Inner JOIN :: Self Join*
 
 자기 자신에게 있는 값을 참조해야 할 때, 자기 자신 스스로를 Join하는 방식
 
@@ -138,7 +138,7 @@ FROM Table1 Nick1 JOIN Table1 Nick2 ON 조건식
     - 조건식 작성시, 순서를 잘 생각해야 한다. FK가 Slave임을 기억하자.
 
 
-### Outer JOIN :: Left, Right, Full
+### *Outer JOIN :: Left, Right, Full*
 
 ``` SQL
 ...

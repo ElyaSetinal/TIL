@@ -1,4 +1,4 @@
-## SubQuery
+## **SubQuery**
 
 Query에는 Select의 의미가 있고, 부(附)라는 의미의 Sub가 붙어있다. :: 부수적 Select
 
@@ -34,7 +34,7 @@ Where ... (Select ... From ... Where ...)
 
 <br>
 
-### Single Row
+### *Single Row*
 
 단일행 연산자는 SubQuery 실행 결과가 단일 행(Record)이 출력되는 경우에 사용 가능한 것이다.
 
@@ -52,7 +52,7 @@ Where ...  (Select ... From ... Where ...)
 
 <br>
 
-### Multi Row
+### *Multi Row*
 
 복수행 연산자는 SubQuery 실행 결과가 복수 행(Record)이 출력되는 경우에 사용 가능한 것이다.
 

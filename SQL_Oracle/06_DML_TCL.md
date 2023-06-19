@@ -1,4 +1,4 @@
-## DML, 개요
+## **DML, 개요**
 
 > Data Manipulation Language, 데이터 조작어
 
@@ -18,7 +18,7 @@ Data를 생성, 수정, 삭제 등의 작업을 하는데 쓰이는 SQL 언어
 
 <br>
 
-## TCL
+## **TCL**
 
 > Transaction Control Langage. 트랜잭션 제어 언어
 
@@ -42,9 +42,9 @@ DML과 TCL의 작동 순서
 
 <br>
 
-## DML 
+## **DML**
 
-### Insert
+### *Insert*
 
 > Table에 새로운 Record를 생성(삽입)
 
@@ -103,7 +103,7 @@ Column의 Data Type에 맞는 데이터가 들어가야 함
     - 서브 쿼리에 괄호를 치지 않는다.
     - 입력할 Table이 존재하지 않으면 사용 불가능
 
-### Update
+### *Update*
 특정 Column(s)을 수정
 
 > Column의 Data Type 일치 및 크기보다 작아야 한다.   
@@ -130,7 +130,7 @@ Column의 제약조건에 맞추어야 한다.(e.g. Not Null시 반드시 값을
 
     - 특정 Record를 where 조건식에서 지정하여, 그 Record의 Column이 갖는 값을 변경한다.
 
-### Delete
+### *Delete*
 
 특정 Record 삭제
 
