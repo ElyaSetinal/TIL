@@ -1,15 +1,24 @@
-## Web application architecture, 웹 사이트
+## **Web application architecture, 웹 사이트**
 
 클라이언트 <> 서버(Web Server; apache, Ngix)
 
-서버에 HTML(HyperText Markup Language)을 작성하여 이를 정적 서버(Apache, Ngix등)에 저장 - 클라이언트가 URL로 요청 -  요청한 html 검색(200 or 404 등) - 요청한 html 반환(응답) - 반환된 html 로컬에 저장 - 렌더링(표시)
+서버에 HTML(HyperText Markup Language)을 작성하여 이를 정적 서버(Apache, Ngix등)에 저장 - 클라이언트가 URL로 요청 -  요청한 html 검색(200 or 404 등) - 요청한 html 반환(응답) - 반환된 html 로컬에 저장 - 렌더링(표시) - 통신 종료
+
+```
+클라이언트 -(1.요청)-> 서버(2.검색)
+  |    └<---(3.응답)----<┘
+ 4.저장
+  |
+ 5.렌더링 - 6.서버 연결 종료
+```
 
 - CSS나 JS등은 Client-Side Programming, 클라이언트 측에서 실행된다.
 - html은 정적(Static)한 특성을 갖는다. 클라이언트와 관계 없이 같은 값, 같은 표현을 갖는다.
 
 <br>
 
-### Container
+### *Container*
+
 '검색'만 가능한 HTML, CSS, JS와 다르게 클라이언트가 요청을 하고, 내부적으로 처리한 다음 그 결과를 html로서 반환하는 것을 동적 파일 처리라 부른다.
 
 이러한 동적 파일을 처리하는데 쓰이는 서버가 동적 서버, Container라고도 부른다.
@@ -20,7 +29,7 @@
 
 <br>
 
-### URL Format
+### *URL Format*
 
 http(s):// 서버 ip(Apache, Ngix등의 서버):Port 번호/자원(보고자 하는 파일명)
 
@@ -33,7 +42,16 @@ http(s):// 서버 ip(Apache, Ngix등의 서버):Port 번호/자원(보고자 하
 
 <br>
 
-### Web Standard
+#### *HTTP Protocol*
+connection less, 연결 유지하지 않음
+state less, 상태값을 저장하지 않음
+
+- 요청하고, 응답하여 렌더링이 완료되면, 클라이언트-서버 간 연결을 종료한다.
+    - 서버 과부하(Over stress) 방지
+
+<br>
+
+### *Web Standard*
 특정 기기와 상관없이 정보에 접근 가능해야 함
 - 데이터 구조 HTML + 디자인/레이아웃 CSS + 동작 및 컨트롤은 JS와 DOM(python에선 django)이 담당해야 한다.
 
@@ -41,7 +59,17 @@ http(s):// 서버 ip(Apache, Ngix등의 서버):Port 번호/자원(보고자 하
 
 <br>
 
-### HTML
+#### *JS API*
+web storage : 웹 DB에 저장, 파일이나 데이터
+web socket : 채팅같은 느낌
+web SQL DB : 경량의 DB
+...
+
+많은 API가 존재한다.
+
+<br>
+
+### *HTML*
 - HyperText Markup Language, 링크가 가능한 \<tag> 구성 언어
 
 \<tag>(시작 태그) Body(몸체) \</tag>(종료 태그, 없는 경우도 있음)
@@ -55,7 +83,7 @@ http(s):// 서버 ip(Apache, Ngix등의 서버):Port 번호/자원(보고자 하
 
 <br>
 
-### HTML5의 기본 문법
+### *HTML5의 기본 문법*
 
 ``` HTML
 <!DOCTYPE html> <!--html의 버전 표시-->
@@ -74,7 +102,7 @@ http(s):// 서버 ip(Apache, Ngix등의 서버):Port 번호/자원(보고자 하
 ```
 
 
-#### DOM Tree
+### *DOM Tree*
 Document Object Model, 객체 지향 모델로써 구조화된 문서를 표현하는 방식
 
 HTML, XML 문서의 프로그래밍 인터페이스이고, 이 DOM 구조를 통하여 문서의 내용(값이나 속성)을 조작하고 제어할 수 있으며, 이러한 DOM을 Tree 형태로 표현한 것이 DOM Tree이다.
