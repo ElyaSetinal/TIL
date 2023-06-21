@@ -13,10 +13,11 @@
 ## Python
 
 ## HTML, CSS
-- [01_Basic01, HTML 기초 및 DOM Tree](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/01_Basic01.md)
-- [02_Basic02, Head Tag](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/02_Basic02.md)
-- [03_Basic03, Body Tag](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/03_Basic03.md)
-- [04_CSS01, CSS 기초 및 선택자](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/04_CSS01.md)
+- [01_HTML01_Basic, HTML 기초 및 DOM Tree](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/01_HTML01_Basic.md)
+- [02_HTML02_Head, Head Tag](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/02_HTML02_Head.md)
+- [03_HTML03_Body, Body Tag](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/03_HTML03_Body.md)
+- [04_CSS01_Basic_Selector, CSS 기초 및 선택자](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/04_CSS01_Basic_Selector.md)
+- [05_CSS02_Style, CSS 스타일 및 레이아웃](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/05_CSS02_Style.md)
 
 ## Markdown Language
 
