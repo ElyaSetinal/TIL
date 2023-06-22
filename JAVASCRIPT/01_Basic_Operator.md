@@ -252,12 +252,12 @@ console.log("identical:",c===a); // false
 
 ```JS
 // 좌측이 true 값을 가짐
-console.log("or True:", 10 || "False value") // 10
-console.log("and True:", 10 && "True value") // "True value"
+console.log("or True:", 10 || "False value"); // 10
+console.log("and True:", 10 && "True value"); // "True value"
 
 // 우측이 false 값을 가짐
-console.log("or False:", 0 || "False value") // "False value"
-console.log("and False:", 0 && "True value") // 0
+console.log("or False:", 0 || "False value"); // "False value"
+console.log("and False:", 0 && "True value"); // 0
 ```
 
 좌측 값을 V1, 우측값을 V2라 가정
