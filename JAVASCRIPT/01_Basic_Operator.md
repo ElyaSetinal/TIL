@@ -10,7 +10,7 @@ JS 사용 방법
 
 <br>
 
-## **식별자, 데이터, 변수*
+## *식별자, 데이터, 변수*
 
 ### *식별자(Identifier)*
 
@@ -120,7 +120,7 @@ if (true) {
     let d=3;  // Local Variable, Block Scope
     ...
 };
-console.log(">>", c, d); // >> 2 error
+console.log(">>", c, d); // >> 2 Error
 
 
 function Scope_Description() {
