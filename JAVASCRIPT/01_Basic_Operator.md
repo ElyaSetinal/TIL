@@ -77,7 +77,65 @@ python에서는 들여쓰기로 통하여 내용을 구분했다면, JS에는 { 
 
 함수나 블럭내에서만 사용되는 지역 변수로 사용되지 않고 전역으로 사용하고 싶다면, 함수나 블럭 밖에서 선언하고 초기화해야 한다.(var 이든 let 이든 밖에서 선언해야 함)
 
-> Scope에 대해서 정리 필요
+#### *Scope, 스코프*
+
+스코프(Scope)는 '범위'라는 의미로, JS에서는 변수에 대해서 접근할 수 있는 범위이다.
+
+```
+      ┌ Global 
+Scope ┤
+      └ Local ─ Function
+              └ Block
+```
+- 기본적으로 전역 스코프(Global scope)와 지역 스코프(Local scope)로 나뉘고, 지역 스코프는 크게 함수 스코프(Function scope)와 블록 스코프(Block scope)로 나뉜다.
+
+전역 스코프(Global Scope)
+- 모든 부분(전역)에서 동작하고 접근할 수 있음을 나타내는 범위로, 전역 스코프를 갖는 변수를 전역 변수라고 한다.
+- 어떤 함수나 블록안에서가 아닌, 가장 바깥 부분에서 선언되는 경우가 많다.
+- 다만, 일반적으로 다른 파일에서 접근할 수는 없다. 소스 파일 단위로 컴파일 되기 때문
+
+지역 스코프(Local Scope)
+- 특정 부분(지역)에서 동작하고 접근할 수 있음을 나타내는 범위. 지역 스코프를 갖는 변수를 지역 변수라고 한다.
+- 특정 함수나, 블록안을 범위로 갖는 스코프이고, 이러한 범위 내부에서 선언되는 변수들이 대다수이다.
+
+> 어떤 기술(변수)이 있을 때, 이 기술을 전세계 누구나 사용가능하게 오픈 소스로 한다면 전역 스코프, 특허를 내고 보호하며 우리만 쓰겠다 하면 지역 스코프
+
+함수 스코프(Function Scope)
+- 지역 스코프의 한 종류로, 변수가 선언된 함수에서만 접근 가능한 범위를 갖는다.
+- 함수 외부에서 호출하려고 하면 에러가 발생한다.
+
+블록 스코프(Block Scope)
+- 블록은 구분자인 { }의 내부를 의미하며, 블록 스코프는 이러한 블록 내부에서만 접근 가능하다를 의미
+- 변수 선언시 let, const를 사용하면 블록 스코프를 따른다.
+- 함수내에서, 함수 스코프는 함수의 전역이지만, 블록 스코프는 함수에서도 지역이다.
+
+``` JS
+/* Scope, 에러 발생시 Error로 표기 */
+var a=0; // Global Variable
+let b=1; // Global Variable
+console.log(">>", a, b); // >> 0 1
+
+if (true) {
+    var c=2;  // Global Variable
+    let d=3;  // Local Variable, Block Scope
+    ...
+};
+console.log(">>", c, d); // >> 2 error
+
+
+function Scope_Description() {
+    var e=4;  // Local Variable, Function Scope
+    let f=5;  // Local Variable, Function Scope and Block Scope
+    if (true) {
+        var g=6;  // Local Variable, Function Scope
+        let h=7;  // Local Variable, Block Scope
+    };
+    console.log(">>", e, f); // >> 4 5
+    console.log(">>", g, h); // >> 6 Error
+};
+console.log(">>", e, f); // >> Error Error
+console.log(">>", g, h); // >> Error Error
+```
 
 <br>
 
