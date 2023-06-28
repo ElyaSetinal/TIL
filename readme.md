@@ -10,6 +10,7 @@
 - [07_DDL, 데이터 정의어](https://github.com/ElyaSetinal/TIL/blob/main/SQL_Oracle/07_DDL.md)
 
 ## Python
+- [01_Basic, 데이터 타입, 변수, 표준 입출력](https://github.com/ElyaSetinal/TIL/blob/main/Python/01_Basic.md)
 
 ## HTML, CSS
 - [01_HTML01_Basic, HTML 기초 및 DOM Tree](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/01_HTML01_Basic.md)

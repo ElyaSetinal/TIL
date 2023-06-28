@@ -42,6 +42,15 @@
 
 <br>
 
+#### *Datatype의 함수*
+
+상기 되어있는 10개의 자료형은 각각 사용 가능한 함수(메서드)들이 다르며 확인 방법은 아래와 같다.
+1. 공식문서 참조, [링크](https://docs.python.org/ko/3/library/stdtypes.html "docs.python.org")
+2. print(dir(datatype))
+
+가능한 공식문서를 참조하기를 권장한다.
+> 기본적으로 Datatype들은 Class, 객체이기 때문에 직접 사용할 수 없는 네이밍 메서드도 포함되어 있는데, 2번 방식은 그런 메서드까지 전부 보여주기 때문에 처음 보는 환경에서는 난해하다.
+
 ### *Escape Characters(이스케이프 문자)*
 
 문자열 내부에서 특별한 의미를 갖는 문자열로, \ (역슬래시)로 시작된다.
@@ -232,9 +241,12 @@ Test1 Test2-_-Test3 Test4
 '''
 ```
 
-## **Formating**
+<br>
+
+## **Formatting**
 
 문자열(String; str)의 함수로, 문자열 내부에 값을 입력할 때 사용
+> help('FORMATTING') 으로 상세 정보 확인 가능
 
 ``` python
 # 기본 방식
@@ -278,3 +290,23 @@ Test1 Test2-_-Test3 Test4
     # Set은 순서가 없기 때문에, 중괄호 안에 Index를 추가할 수 없다.
     # 값은 중괄호 안에 임의로 입력된다.
     ```
+
+- % 지정 방식, C에서도 사용하는 방식
+    - python에서는 자주 사용하지 않는다.
+    ``` python
+    "name: %s, age: %d, height: %.2f, gender: %c" % ("James", 27, 186.582, "M")
+    # name: James, age: 27, height: 186.58, gender: M
+    # %s : String, 문자열 || %d : digit, 정수형 || %.f : float, 실수형 || %c : 문자, 단일 문자열
+
+#### *Format String*
+.format() 방식에 비하여 좀더 간결하게 작성하는 방식이지만, 문자열은 변수에 값을 입력해야 사용 가능하다.
+
+문자열 앞에 f를 붙여서 format string임을 명시해야 한다.
+
+``` python
+name = "Song"
+print(f"이름:{name}")  # 이름:Song
+```
+
+- 중괄호 내부에서 산술연산, 비교연산 가능
+- 변수의 데이터 타입에 해당하는 함수 사용 가능
