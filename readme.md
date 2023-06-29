@@ -11,6 +11,7 @@
 
 ## Python
 - [01_Basic, 데이터 타입, 변수, 표준 입출력](https://github.com/ElyaSetinal/TIL/blob/main/Python/01_Basic.md)
+- [02_Operator, 연산자 및 형변환](https://github.com/ElyaSetinal/TIL/blob/main/Python/02_Operator.md)
 
 ## HTML, CSS
 - [01_HTML01_Basic, HTML 기초 및 DOM Tree](https://github.com/ElyaSetinal/TIL/blob/main/HTML_CSS/01_HTML01_Basic.md)
